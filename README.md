@@ -4,7 +4,11 @@ Eversnap contest 48h web app. Web app made in 48h using Django as FW, SQLite3 as
 
 ## Languages, Modules and Frameworks used
 **Backend**: Django
+
 **Database**: SQLite3
+
 **Task manager**: Celery
+
 **Twitter module**: Twython
+
 **Frontend**: HTML, CSS, jQuery, jQuery montage, jQuery-UI, Galleriffic
