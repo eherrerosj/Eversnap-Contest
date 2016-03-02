@@ -1,0 +1,7 @@
+django-celery
+celery
+twython
+django
+djangorestframework
+markdown
+django-filter

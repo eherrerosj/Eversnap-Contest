@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ever
+Version: 0.1
+Summary: This package contains the everhashtag django project. It is a smart automatic album creator. It fetches Twitter pictures under any specified hashtag periodically and stores them in a database with other info like times favorited, owner, date of upload, date of storage... Main features: email notification every 100 pictures album growth, automatic collage creation for top 7 pictures, nice gallery to view all the stored pictures for every album.
+Home-page: UNKNOWN
+Author: Enrique Herreros
+Author-email: eherrerosj@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: eversnap contest assignment everhashtag collector ever twitter entities pictures smart-album
+Platform: UNKNOWN

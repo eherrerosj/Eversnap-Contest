@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Twitter Album | EverSnap contest Enrique Herreros</title>
+        
+       	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+       	<script src="/static/jquery.galleriffic.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="/static/basic.css" type="text/css" />
+		<link rel="stylesheet" href="/static/galleriffic-1.css" type="text/css" />
+
+    </head>
+<body>
+		<div id="page">
+			<div id="container">
+				<h1>Django contest for <img src="http://www.geteversnap.com/uploads/1/0/1/8/10189783/1391823781.png"></h1>
+				<h2>Enrique Herreros</h2>
+				<h4>The following album contains all Twitter pictures with the hashtag <font color="blue" size="3">{{ pictures.0.album.hashtag }}</font> fetched since <font color="blue" size="3">{{ oldestpicture.datestored }}</font></h4>
+				<!-- Start Minimal Gallery Html Containers -->
+				<div id="gallery" class="content">
+					<div id="controls" class="controls"></div>
+					<div class="slideshow-container">
+						<div id="loading" class="loader"></div>
+						<div id="slideshow" class="slideshow"></div>
+					</div>
+				</div>
+				<div id="thumbs" class="navigation">
+					<ul class="thumbs noscript">
+						{% if pictures %}
+		    			{% for picture in pictures %}
+				        <li>
+				            <a class="thumb" title="Picture in album since {{ picture.datestored }}" href="{{ picture.url }}" >Picture {{ picture.id }}</a>
+				        </li>
+		        		{% endfor %}
+		        		{% endif %}
+					</ul>
+				</div>
+				<!-- End Minimal Gallery Html Containers -->
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		<div id="footer">&copy; 2014 Enrique Herreros</div>
+		<script type="text/javascript">
+		{% autoescape off %}
+			// We only want these styles applied when javascript is enabled
+			$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+			$('div.content').css('display', 'block');
+
+			$(document).ready(function() {				
+				// Initialize Minimal Galleriffic Gallery
+				$('#thumbs').galleriffic({
+					imageContainerSel:      '#slideshow',
+					controlsContainerSel:   '#controls'
+
+				});
+			});
+		{% endautoescape %}
+		</script>
+	</body>
+</html>
+
+
+
+
+	
